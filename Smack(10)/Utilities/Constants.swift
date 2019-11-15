@@ -8,8 +8,19 @@
 
 import Foundation
 
+typealias CopletionHandler = (_ Success: Bool)->()
+
+//url constants
+let BASE_URL = "https://smackolgas.herokuapp.com/v1/"
+let URL_REGISTER = "\(BASE_URL)account/register"
+
 //segue
 
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCAUNT = "toCreateAccaunt"
 let UNWIND = "unwindToChennel"
+
+//user defaults
+let TOKEN_KEY = "token"
+let LOGGED_IN_KEY = "loggedIn"
+let USER_EMAIL = "userEmail"
