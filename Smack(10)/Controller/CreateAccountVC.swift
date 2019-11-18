@@ -18,11 +18,18 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var userImg: UIImageView!
     
     //variables
-    var avatarName = "profileDefault"
+    var avatarName1 = "profileDefault"
     var avatarColor = "[0.5,0.5,0.5,1]"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("\(UserDataService.instance.avatarName)Hello")
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName1 = UserDataService.instance.avatarName
+        }
     }
     
     @IBAction func createAccntPressed(_ sender: Any) {
@@ -34,7 +41,7 @@ class CreateAccountVC: UIViewController {
             if success{
                 AuthService.instance.loginUser(email: email, password: pass) { (succsess) in
                     if success {
-                        AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor) { (seccess) in
+                        AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName1, avatarColor: self.avatarColor) { (seccess) in
                             if success {
                                 print (UserDataService.instance.name, UserDataService.instance.avatarName)
                             self.performSegue(withIdentifier: UNWIND, sender: nil)
@@ -47,8 +54,9 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func pickAvatarPressed(_ sender: Any) {
-        
+
     performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
+
     }
     
     @IBAction func pickBGColorPressed(_ sender: Any) {
