@@ -16,6 +16,13 @@ let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 
+//colors
+
+let smackPurplePlaceholder = #colorLiteral(red: 0, green: 0.4664626122, blue: 1, alpha: 0.5)
+
+//notifications constants
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+
 //segue
 
 let TO_LOGIN = "toLogin"
