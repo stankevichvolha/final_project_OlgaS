@@ -33,6 +33,9 @@
 		087A6D08237FAD41006D523C /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087A6D07237FAD41006D523C /* UserDataService.swift */; };
 		087A6D0C2380F5D0006D523C /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087A6D0B2380F5D0006D523C /* AvatarPickerVC.swift */; };
 		087A6D0E2380FDE3006D523C /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087A6D0D2380FDE3006D523C /* AvatarCell.swift */; };
+		08CC90552385CFEC006E4FF2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC90542385CFEC006E4FF2 /* Message.swift */; };
+		08CC905A2385F20B006E4FF2 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC90592385F20B006E4FF2 /* KeyboardBoundView.swift */; };
+		08CC905C2385FA32006E4FF2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC905B2385FA32006E4FF2 /* MessageCell.swift */; };
 		4F939037969B64826E302381 /* Pods_Smack_10_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2406DD37EE3CC0B435A5F9D7 /* Pods_Smack_10_.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		087A6D07237FAD41006D523C /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		087A6D0B2380F5D0006D523C /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		087A6D0D2380FDE3006D523C /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		08CC90542385CFEC006E4FF2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		08CC90592385F20B006E4FF2 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		08CC905B2385FA32006E4FF2 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		2406DD37EE3CC0B435A5F9D7 /* Pods_Smack_10_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack_10_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72846E6C3D820EA4F6560897 /* Pods-Smack(10).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack(10).debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack(10)/Pods-Smack(10).debug.xcconfig"; sourceTree = "<group>"; };
 		D4427739D9180AB94E942DBC /* Pods-Smack(10).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack(10).release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack(10)/Pods-Smack(10).release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 				087A6D0D2380FDE3006D523C /* AvatarCell.swift */,
 				08589FCB238318A600BADADE /* CircleImage.swift */,
 				08162FD32384608500F19523 /* ChannelCell.swift */,
+				08CC90592385F20B006E4FF2 /* KeyboardBoundView.swift */,
+				08CC905B2385FA32006E4FF2 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				08162FD123844D0000F19523 /* Channel.swift */,
+				08CC90542385CFEC006E4FF2 /* Message.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 			files = (
 				086D163C237D31AD001AEA69 /* ChatVC.swift in Sources */,
 				086D1624237D2D4B001AEA69 /* ViewController.swift in Sources */,
+				08CC905A2385F20B006E4FF2 /* KeyboardBoundView.swift in Sources */,
 				087A6D0E2380FDE3006D523C /* AvatarCell.swift in Sources */,
 				087699B8237E1C27004EEC33 /* LoginVC.swift in Sources */,
 				08589FCF23834F5B00BADADE /* ProfileVC.swift in Sources */,
@@ -348,7 +358,9 @@
 				087699B6237DE70D004EEC33 /* Constants.swift in Sources */,
 				08162FDC2384984400F19523 /* SocketService.swift in Sources */,
 				087A6D04237F3F66006D523C /* AuthService.swift in Sources */,
+				08CC905C2385FA32006E4FF2 /* MessageCell.swift in Sources */,
 				086D1637237D2F3F001AEA69 /* SWRevealViewController.m in Sources */,
+				08CC90552385CFEC006E4FF2 /* Message.swift in Sources */,
 				08162FD92384717B00F19523 /* AddChannelVC.swift in Sources */,
 				086D163E237D31D0001AEA69 /* ChannelVC.swift in Sources */,
 				087A6D0C2380F5D0006D523C /* AvatarPickerVC.swift in Sources */,
