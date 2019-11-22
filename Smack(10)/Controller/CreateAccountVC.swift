@@ -39,6 +39,10 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func createAccntPressed(_ sender: Any) {
+        
+        if emailTxt.text == "" || passTxt.text == "" || usernameTxt.text == "" {
+            AlertService.instance.alert(view: self, title: "Can't create an account", message: "Please type user name, email and password")
+        } else {
         spinner.isHidden = false
         spinner.startAnimating()
         guard let email = emailTxt.text, emailTxt.text != "" else {return}
@@ -60,6 +64,7 @@ class CreateAccountVC: UIViewController {
                     }
                 }
             }
+        }
         }
     }
     
