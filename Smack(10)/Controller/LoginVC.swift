@@ -22,6 +22,11 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func loginBtnPressed(_ sender: Any) {
+        if usernameTxt.text == "" || passwordTxt.text == ""{
+            AlertService.instance.alert(view: self, title: "Can't login", message: "Please type your user name and password")
+        } else {
+
+    
         spinner.isHidden = false
         spinner.startAnimating()
         
@@ -38,6 +43,7 @@ class LoginVC: UIViewController {
                     }
                 }
             }
+        }
         }
     }
     

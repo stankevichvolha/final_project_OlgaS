@@ -147,18 +147,26 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dg-D6-Q2a" customClass="GradientView" customModule="Smack_10_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZxZ-gJ-2fl" firstAttribute="trailing" secondItem="jFw-Ah-bRt" secondAttribute="trailing" id="4ns-jo-8l5"/>
+                            <constraint firstItem="1dg-D6-Q2a" firstAttribute="leading" secondItem="aph-i0-PKg" secondAttribute="leading" id="58S-HY-ysl"/>
                             <constraint firstItem="pLt-j7-qb4" firstAttribute="top" secondItem="McF-Ra-Ezi" secondAttribute="bottom" constant="6" id="Bkt-V8-nfs"/>
                             <constraint firstItem="ZxZ-gJ-2fl" firstAttribute="leading" secondItem="jFw-Ah-bRt" secondAttribute="leading" id="HP5-Lp-C6e"/>
                             <constraint firstItem="pLt-j7-qb4" firstAttribute="leading" secondItem="jFw-Ah-bRt" secondAttribute="leading" id="Hm4-Fg-sjz"/>
+                            <constraint firstItem="1dg-D6-Q2a" firstAttribute="top" secondItem="pLt-j7-qb4" secondAttribute="bottom" id="HzS-sV-hSj"/>
                             <constraint firstItem="jFw-Ah-bRt" firstAttribute="trailing" secondItem="He3-lj-sfC" secondAttribute="trailing" constant="8" id="Ns6-or-bg2"/>
                             <constraint firstItem="GvD-q1-42A" firstAttribute="top" secondItem="ZxZ-gJ-2fl" secondAttribute="bottom" id="OaR-Bu-nNS"/>
                             <constraint firstItem="jFw-Ah-bRt" firstAttribute="trailing" secondItem="GvD-q1-42A" secondAttribute="trailing" id="PbR-RN-ACi"/>
                             <constraint firstItem="pLt-j7-qb4" firstAttribute="top" secondItem="GvD-q1-42A" secondAttribute="bottom" constant="30" id="PiH-hf-eWM"/>
                             <constraint firstItem="McF-Ra-Ezi" firstAttribute="leading" secondItem="jFw-Ah-bRt" secondAttribute="leading" constant="8" id="Puy-o6-xRd"/>
+                            <constraint firstAttribute="trailing" secondItem="1dg-D6-Q2a" secondAttribute="trailing" id="YFj-AR-HzW"/>
+                            <constraint firstAttribute="bottom" secondItem="1dg-D6-Q2a" secondAttribute="bottom" id="Ylb-Ua-lu7"/>
                             <constraint firstItem="pLt-j7-qb4" firstAttribute="bottom" secondItem="jFw-Ah-bRt" secondAttribute="bottom" id="Z5s-8X-AbS"/>
                             <constraint firstItem="GvD-q1-42A" firstAttribute="leading" secondItem="jFw-Ah-bRt" secondAttribute="leading" id="cYa-lp-hpi"/>
                             <constraint firstItem="jFw-Ah-bRt" firstAttribute="trailing" secondItem="pLt-j7-qb4" secondAttribute="trailing" id="ehh-9m-fpR"/>

@@ -39,15 +39,19 @@ self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer(
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_notif:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_notif:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
-        SocketService.instance.getMessage { (success) in
-            if success {
-            self.tableView.reloadData()
-            if MessageService.instance.messages.count > 0 {
-                let endIndex = IndexPath(row: MessageService.instance.messages.count-1, section: 0)
-                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+        
+        SocketService.instance.getMessage { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(newMessage)
+                self.tableView.reloadData()
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                }
+                
             }
         }
-        }
+        
         SocketService.instance.getTypingUsers { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else {return}
             var names = ""
@@ -73,6 +77,8 @@ self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer(
                 self.tapingUserLbl.text = ""
             }
         }
+        
+        
         
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail { (success) in
@@ -150,6 +156,8 @@ self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer(
         MessageService.instance.findAllMassages(channelId: channelId) { (success) in
             if success {
                 self.tableView.reloadData()
+                let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
             }
         }
     }
