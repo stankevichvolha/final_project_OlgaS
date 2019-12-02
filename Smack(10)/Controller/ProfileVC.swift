@@ -16,9 +16,17 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var logoutBtn: UIButton!
     
+    var newName:String?
+    
+    func setAccessibility() {
+        logoutBtn.isAccessibilityElement = true
+        logoutBtn.accessibilityIdentifier = "logautBtnProfileVC"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAccessibility()
         setupView()
       
     }
@@ -47,5 +55,5 @@ class ProfileVC: UIViewController {
     @objc func closeTap(_recognizer:UITapGestureRecognizer){
         dismiss(animated: true, completion: nil)
     }
-    
+        
 }

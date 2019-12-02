@@ -20,6 +20,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // variables
     var isTyping = false
     
+    
+    func accessabilityIdent() {
+        menuBtn.isAccessibilityElement = true
+        menuBtn.accessibilityIdentifier = "menuBtnChatVC"
+        channelNameLbl.isAccessibilityElement = true
+        channelNameLbl.accessibilityIdentifier = "channelNameLblChatVC"
+        MessageTxtBox.isAccessibilityElement = true
+        MessageTxtBox.accessibilityIdentifier = "messageTxtBoxChatVC"
+        sendBtn.isAccessibilityElement = true
+        sendBtn.accessibilityIdentifier = "sendBtnChatVC"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
@@ -29,6 +41,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
         sendBtn.isHidden = true
+        
+        accessabilityIdent()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)

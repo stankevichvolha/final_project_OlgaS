@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack_10_" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="E9O-ou-lem" id="AM8-02-gCq"/>
+                <outlet property="logoutBtn" destination="atD-Qi-bBA" id="J0u-4I-fAy"/>
                 <outlet property="userEmail" destination="ohi-hp-Gz3" id="FKQ-7M-8jz"/>
                 <outlet property="userImg" destination="aXi-lf-l0T" id="h6d-vd-Lkm"/>
                 <outlet property="userName" destination="FfR-c7-TUe" id="tMd-U3-lwJ"/>

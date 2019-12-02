@@ -283,6 +283,7 @@
                         <viewLayoutGuide key="safeArea" id="CmF-Xg-oRC"/>
                     </view>
                     <connections>
+                        <outlet property="addChannelBtn" destination="OJK-r5-h4Z" id="GGV-md-PtA"/>
                         <outlet property="loginBtn" destination="14a-76-aA7" id="iUg-n0-BU0"/>
                         <outlet property="tableView" destination="5rg-9K-O2w" id="wDG-W6-21Y"/>
                         <outlet property="userImg" destination="che-By-DjE" id="Qml-u2-kVR"/>
@@ -422,7 +423,9 @@
                         <viewLayoutGuide key="safeArea" id="X02-gM-VUf"/>
                     </view>
                     <connections>
+                        <outlet property="loginBtn" destination="bZB-cL-ONn" id="aGy-tc-Le0"/>
                         <outlet property="passwordTxt" destination="vyH-QS-LOQ" id="euz-vP-9z6"/>
+                        <outlet property="signUpBtn" destination="5uT-RV-xad" id="LpT-p6-YbI"/>
                         <outlet property="spinner" destination="1Mk-Uj-bMY" id="9df-2E-jFb"/>
                         <outlet property="usernameTxt" destination="drU-v3-iNz" id="x39-tq-5O9"/>
                         <segue destination="j0j-zW-Scj" kind="show" identifier="toCreateAccaunt" id="QeL-LB-ddz"/>
@@ -596,6 +599,9 @@
                         <viewLayoutGuide key="safeArea" id="SsM-tj-RTz"/>
                     </view>
                     <connections>
+                        <outlet property="backgraundBtn" destination="Jgj-QR-8F5" id="Ysr-lf-Ce9"/>
+                        <outlet property="chooseAvtBtn" destination="9Ta-a9-MLz" id="48e-kg-y9c"/>
+                        <outlet property="createAccountBtn" destination="dIt-Ne-2VI" id="rzZ-Rj-h4t"/>
                         <outlet property="emailTxt" destination="L0H-rr-mcN" id="ThZ-fN-WC3"/>
                         <outlet property="passTxt" destination="gwo-yS-pQ6" id="UAq-t1-9ti"/>
                         <outlet property="spinner" destination="LPv-FN-cB4" id="tMD-VJ-yRq"/>
@@ -694,8 +700,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="N3n-i9-wfx"/>
                     <connections>
-                        <outlet property="SegmentControl" destination="WAd-Rq-MJZ" id="wMg-Or-Nph"/>
                         <outlet property="collectionView" destination="9SJ-zz-ww1" id="6s2-5c-SrC"/>
+                        <outlet property="segmentControl" destination="WAd-Rq-MJZ" id="wMg-Or-Nph"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxN-N1-AYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

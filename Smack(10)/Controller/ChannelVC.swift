@@ -14,19 +14,27 @@ class ChannelVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
     //Outlets
     
     @IBOutlet weak var loginBtn: UIButton!
-    
     @IBOutlet weak var userImg: CircleImage!
-    
-    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addChannelBtn: UIButton!
+    
     @IBAction func prepareForUnwind (seque: UIStoryboardSegue){
         
+    }
+    
+    func setAccessability() {
+        loginBtn.isAccessibilityElement = true
+        loginBtn.accessibilityIdentifier = "loginBtnChannelVC"
+        addChannelBtn.isAccessibilityElement = true
+        addChannelBtn.accessibilityIdentifier = "addChannelBtnChannelVC"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        setAccessability()
         
       self.revealViewController().rearViewRevealWidth = self.view.frame.size.width-60
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_notif:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)

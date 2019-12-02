@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="bgView" destination="Hgg-WP-JkX" id="Sg5-86-XCV"/>
                 <outlet property="chanDesc" destination="qt3-07-7g4" id="H2W-0h-6bo"/>
+                <outlet property="createChannelBtn" destination="aa6-EH-KWy" id="3HK-YO-8lB"/>
                 <outlet property="nameTxt" destination="ZH3-T6-9E9" id="7my-9i-aFm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

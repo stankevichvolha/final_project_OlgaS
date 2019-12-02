@@ -13,6 +13,7 @@
 		08162FD92384717B00F19523 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08162FD72384717B00F19523 /* AddChannelVC.swift */; };
 		08162FDA2384717B00F19523 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08162FD82384717B00F19523 /* AddChannelVC.xib */; };
 		08162FDC2384984400F19523 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08162FDB2384984400F19523 /* SocketService.swift */; };
+		0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */; };
 		08589FCC238318A600BADADE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCB238318A600BADADE /* CircleImage.swift */; };
 		08589FCF23834F5B00BADADE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCD23834F5B00BADADE /* ProfileVC.swift */; };
 		08589FD023834F5B00BADADE /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08589FCE23834F5B00BADADE /* ProfileVC.xib */; };
@@ -40,6 +41,16 @@
 		4F939037969B64826E302381 /* Pods_Smack_10_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2406DD37EE3CC0B435A5F9D7 /* Pods_Smack_10_.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0842AC1823957D3A00CC274C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 086D1616237D2D4B001AEA69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 086D161D237D2D4B001AEA69;
+			remoteInfo = "Smack(10)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		08162FCF23844CA100F19523 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		08162FD123844D0000F19523 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
@@ -47,6 +58,9 @@
 		08162FD72384717B00F19523 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		08162FD82384717B00F19523 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		08162FDB2384984400F19523 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		0842AC1323957D3A00CC274C /* Smack(10)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smack(10)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smack_10_UITests.swift; sourceTree = "<group>"; };
+		0842AC1723957D3A00CC274C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08589FCB238318A600BADADE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		08589FCD23834F5B00BADADE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		08589FCE23834F5B00BADADE /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -81,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0842AC1023957D3A00CC274C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		086D161B237D2D4B001AEA69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0842AC1423957D3A00CC274C /* Smack(10)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */,
+				0842AC1723957D3A00CC274C /* Info.plist */,
+			);
+			path = "Smack(10)UITests";
+			sourceTree = "<group>";
+		};
 		08589FD123834F9600BADADE /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				086D1620237D2D4B001AEA69 /* Smack(10) */,
+				0842AC1423957D3A00CC274C /* Smack(10)UITests */,
 				086D161F237D2D4B001AEA69 /* Products */,
 				F6E0F243399CFBACA341C7DB /* Pods */,
 				4AB2A80188507CAB13D73A4A /* Frameworks */,
@@ -115,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				086D161E237D2D4B001AEA69 /* Smack(10).app */,
+				0842AC1323957D3A00CC274C /* Smack(10)UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,6 +258,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0842AC1223957D3A00CC274C /* Smack(10)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0842AC1C23957D3A00CC274C /* Build configuration list for PBXNativeTarget "Smack(10)UITests" */;
+			buildPhases = (
+				0842AC0F23957D3A00CC274C /* Sources */,
+				0842AC1023957D3A00CC274C /* Frameworks */,
+				0842AC1123957D3A00CC274C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0842AC1923957D3A00CC274C /* PBXTargetDependency */,
+			);
+			name = "Smack(10)UITests";
+			productName = "Smack(10)UITests";
+			productReference = 0842AC1323957D3A00CC274C /* Smack(10)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		086D161D237D2D4B001AEA69 /* Smack(10) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 086D1630237D2D4C001AEA69 /* Build configuration list for PBXNativeTarget "Smack(10)" */;
@@ -251,10 +301,14 @@
 		086D1616237D2D4B001AEA69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Volha  Stankevich";
 				TargetAttributes = {
+					0842AC1223957D3A00CC274C = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 086D161D237D2D4B001AEA69;
+					};
 					086D161D237D2D4B001AEA69 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
@@ -275,11 +329,19 @@
 			projectRoot = "";
 			targets = (
 				086D161D237D2D4B001AEA69 /* Smack(10) */,
+				0842AC1223957D3A00CC274C /* Smack(10)UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0842AC1123957D3A00CC274C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		086D161C237D2D4B001AEA69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +402,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0842AC0F23957D3A00CC274C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		086D161A237D2D4B001AEA69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +444,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0842AC1923957D3A00CC274C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 086D161D237D2D4B001AEA69 /* Smack(10) */;
+			targetProxy = 0842AC1823957D3A00CC274C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		086D1625237D2D4B001AEA69 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -394,6 +472,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0842AC1A23957D3A00CC274C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Smack(10)UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "volha.Smack-10-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smack(10)";
+			};
+			name = Debug;
+		};
+		0842AC1B23957D3A00CC274C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Smack(10)UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "volha.Smack-10-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smack(10)";
+			};
+			name = Release;
+		};
 		086D162E237D2D4C001AEA69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -554,6 +670,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0842AC1C23957D3A00CC274C /* Build configuration list for PBXNativeTarget "Smack(10)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0842AC1A23957D3A00CC274C /* Debug */,
+				0842AC1B23957D3A00CC274C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		086D1619237D2D4B001AEA69 /* Build configuration list for PBXProject "Smack(10)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -13,15 +13,24 @@ class AddChannelVC: UIViewController {
     //Outlets
     
     @IBOutlet weak var nameTxt: UITextField!
-    
     @IBOutlet weak var chanDesc: UITextField!
+    @IBOutlet weak var createChannelBtn: RoundedButton!
     @IBOutlet weak var bgView: UIView!
+    
+    func setAccessibility() {
+        nameTxt.isAccessibilityElement = true
+        nameTxt.accessibilityIdentifier = "nameTxtAddChannelVC"
+        chanDesc.isAccessibilityElement = true
+        chanDesc.accessibilityIdentifier = "chanDescAddChannelVC"
+        createChannelBtn.isAccessibilityElement = true
+        createChannelBtn.accessibilityIdentifier = "createChannelBtnAddChannelVC"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAccessibility()
         setupView()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func closeModalPressed(_ sender: Any) {

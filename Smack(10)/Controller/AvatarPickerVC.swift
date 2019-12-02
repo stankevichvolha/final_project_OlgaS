@@ -15,7 +15,13 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collectionView: UICollectionView!
     var avatarType = AvatarType.dark
     
-    @IBOutlet weak var SegmentControl: UISegmentedControl!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
+    func setAccessibility(){
+        segmentControl.isAccessibilityElement = true
+        segmentControl.accessibilityIdentifier = "segmentControlAvatarVC"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -62,7 +68,7 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func segmentControlChanged(_ sender: Any) {
-        if SegmentControl.selectedSegmentIndex == 0 {
+        if segmentControl.selectedSegmentIndex == 0 {
             avatarType = .dark
         } else {
             avatarType = .light

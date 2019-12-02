@@ -16,6 +16,9 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
+    @IBOutlet weak var chooseAvtBtn: UIButton!
+    @IBOutlet weak var createAccountBtn: RoundedButton!
+    @IBOutlet weak var backgraundBtn: UIButton!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     //variables
@@ -23,8 +26,24 @@ class CreateAccountVC: UIViewController {
     var avatarColor = "[0.5,0.5,0.5,1]"
     var bgColor : UIColor?
     
+    func setAccessibity(){
+        usernameTxt.isAccessibilityElement = true
+        usernameTxt.accessibilityIdentifier = "usernameTxtCreateActVC"
+        emailTxt.isAccessibilityElement = true
+        emailTxt.accessibilityIdentifier = "emailTxtCreateActVC"
+        passTxt.isAccessibilityElement = true
+        passTxt.accessibilityIdentifier = "passTxtCreateActVC"
+        chooseAvtBtn.isAccessibilityElement = true
+        chooseAvtBtn.accessibilityIdentifier = "chooseAvtBtnCreateActVC"
+        createAccountBtn.isAccessibilityElement = true
+        createAccountBtn.accessibilityIdentifier = "createAccountBtnCreateActVC"
+        backgraundBtn.isAccessibilityElement = true
+        backgraundBtn.accessibilityIdentifier = "backgraundBtnCreateActVC"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAccessibity()
         setupView()
     }
     override func viewDidAppear(_ animated: Bool) {

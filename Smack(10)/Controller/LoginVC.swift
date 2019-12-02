@@ -14,10 +14,24 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var loginBtn: RoundedButton!
+    @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    func setAccessibility() {
+        usernameTxt.isAccessibilityElement = true
+        usernameTxt.accessibilityIdentifier = "usernameTxtLoginVC"
+        passwordTxt.isAccessibilityElement = true
+        passwordTxt.accessibilityIdentifier = "passwordTxtLoginVC"
+        loginBtn.isAccessibilityElement = true
+        loginBtn.accessibilityIdentifier = "loginBtnLoginVC"
+        signUpBtn.isAccessibilityElement = true
+        signUpBtn.accessibilityIdentifier = "signUpBtnLoginVC"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAccessibility()
         setupView()
     }
 
