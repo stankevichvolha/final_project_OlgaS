@@ -14,6 +14,9 @@
 		08162FDA2384717B00F19523 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08162FD82384717B00F19523 /* AddChannelVC.xib */; };
 		08162FDC2384984400F19523 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08162FDB2384984400F19523 /* SocketService.swift */; };
 		0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */; };
+		0842AC1F2395B83B00CC274C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC1E2395B83B00CC274C /* ChatScreen.swift */; };
+		0842AC212395BEC800CC274C /* ChannelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC202395BEC800CC274C /* ChannelScreen.swift */; };
+		0842AC232395C11800CC274C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC222395C11800CC274C /* LoginScreen.swift */; };
 		08589FCC238318A600BADADE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCB238318A600BADADE /* CircleImage.swift */; };
 		08589FCF23834F5B00BADADE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCD23834F5B00BADADE /* ProfileVC.swift */; };
 		08589FD023834F5B00BADADE /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08589FCE23834F5B00BADADE /* ProfileVC.xib */; };
@@ -61,6 +64,9 @@
 		0842AC1323957D3A00CC274C /* Smack(10)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smack(10)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smack_10_UITests.swift; sourceTree = "<group>"; };
 		0842AC1723957D3A00CC274C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0842AC1E2395B83B00CC274C /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		0842AC202395BEC800CC274C /* ChannelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelScreen.swift; sourceTree = "<group>"; };
+		0842AC222395C11800CC274C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		08589FCB238318A600BADADE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		08589FCD23834F5B00BADADE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		08589FCE23834F5B00BADADE /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -116,10 +122,21 @@
 		0842AC1423957D3A00CC274C /* Smack(10)UITests */ = {
 			isa = PBXGroup;
 			children = (
+				0842AC1D2395B7BB00CC274C /* Screens */,
 				0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */,
 				0842AC1723957D3A00CC274C /* Info.plist */,
 			);
 			path = "Smack(10)UITests";
+			sourceTree = "<group>";
+		};
+		0842AC1D2395B7BB00CC274C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0842AC1E2395B83B00CC274C /* ChatScreen.swift */,
+				0842AC202395BEC800CC274C /* ChannelScreen.swift */,
+				0842AC222395C11800CC274C /* LoginScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		08589FD123834F9600BADADE /* XIBs */ = {
@@ -406,7 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0842AC212395BEC800CC274C /* ChannelScreen.swift in Sources */,
+				0842AC232395C11800CC274C /* LoginScreen.swift in Sources */,
 				0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */,
+				0842AC1F2395B83B00CC274C /* ChatScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
