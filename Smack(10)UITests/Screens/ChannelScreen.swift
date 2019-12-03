@@ -23,6 +23,10 @@ class ChannelScreen: BaseScreen {
         return LoginScreen()
     }
     
+    func getLoginBtnText(){
+        
+    }
+    
     
 }
 

@@ -23,6 +23,10 @@ class LoginScreen: BaseScreen {
     func login() {
         tap(loginBtn)
     }
+    func createAnAccount() -> CreateAccountScreen{
+        tap(signupBtn)
+        return CreateAccountScreen()
+    }
     
     func closeCannotLoginAlert() {
         tap(alertCannotLogin)
@@ -31,7 +35,7 @@ class LoginScreen: BaseScreen {
         tap(usernameTxt)
         type(email, to: usernameTxt)
     }
-    func typePassword(password: String){
+    func type(password: String){
         tap(passwordTxt)
         type(password, to: passwordTxt)
     }

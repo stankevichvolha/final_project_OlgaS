@@ -19,6 +19,8 @@
 		0842AC232395C11800CC274C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC222395C11800CC274C /* LoginScreen.swift */; };
 		0842AC25239620DF00CC274C /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC24239620DF00CC274C /* BaseScreen.swift */; };
 		0842AC27239626FB00CC274C /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC26239626FB00CC274C /* BaseTest.swift */; };
+		0842AC29239635C300CC274C /* CreateAccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC28239635C300CC274C /* CreateAccountScreen.swift */; };
+		0842AC2B23963F5200CC274C /* AvatarPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC2A23963F5200CC274C /* AvatarPickerScreen.swift */; };
 		08589FCC238318A600BADADE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCB238318A600BADADE /* CircleImage.swift */; };
 		08589FCF23834F5B00BADADE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCD23834F5B00BADADE /* ProfileVC.swift */; };
 		08589FD023834F5B00BADADE /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08589FCE23834F5B00BADADE /* ProfileVC.xib */; };
@@ -71,6 +73,8 @@
 		0842AC222395C11800CC274C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		0842AC24239620DF00CC274C /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		0842AC26239626FB00CC274C /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		0842AC28239635C300CC274C /* CreateAccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountScreen.swift; sourceTree = "<group>"; };
+		0842AC2A23963F5200CC274C /* AvatarPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerScreen.swift; sourceTree = "<group>"; };
 		08589FCB238318A600BADADE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		08589FCD23834F5B00BADADE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		08589FCE23834F5B00BADADE /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				0842AC202395BEC800CC274C /* ChannelScreen.swift */,
 				0842AC222395C11800CC274C /* LoginScreen.swift */,
 				0842AC24239620DF00CC274C /* BaseScreen.swift */,
+				0842AC28239635C300CC274C /* CreateAccountScreen.swift */,
+				0842AC2A23963F5200CC274C /* AvatarPickerScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -429,8 +435,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0842AC2B23963F5200CC274C /* AvatarPickerScreen.swift in Sources */,
 				0842AC212395BEC800CC274C /* ChannelScreen.swift in Sources */,
 				0842AC232395C11800CC274C /* LoginScreen.swift in Sources */,
+				0842AC29239635C300CC274C /* CreateAccountScreen.swift in Sources */,
 				0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */,
 				0842AC1F2395B83B00CC274C /* ChatScreen.swift in Sources */,
 				0842AC27239626FB00CC274C /* BaseTest.swift in Sources */,

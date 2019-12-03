@@ -23,10 +23,26 @@ class Smack_10_UITests: BaseTest {
         XCTAssert(loginScreen.alertCannotLoginExists(), "Allert 'Can't login' not visible")
         loginScreen.closeCannotLoginAlert()
         loginScreen.clearEmail()
-        loginScreen.typePassword(password: "123")
+        loginScreen.type(password: "123")
         loginScreen.login()
         XCTAssert(loginScreen.alertCannotLoginExists(), "Allert 'Can't login' not visible")
         
+    }
+    
+    func testCreateAccount(){
+        let randInt = Int.random(in: 1...10000)
+        let chatScreen = ChatScreen()
+        let channelScreen = chatScreen.openMenu()
+        let loginScreen = channelScreen.login()
+        let createAccountScreen = loginScreen.createAnAccount()
+        createAccountScreen.typeUser(name: "test\(randInt)")
+        createAccountScreen.type(email: "test\(randInt)@test.com")
+        createAccountScreen.type(password: "123456")
+        let avatarPickerScreen = createAccountScreen.chooseAvatar()
+        avatarPickerScreen.pickAvatar()
+        createAccountScreen.chooseBackgroundColor()
+        createAccountScreen.createAccount()
+
     }
 
 }
