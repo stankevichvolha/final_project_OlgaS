@@ -17,6 +17,8 @@
 		0842AC1F2395B83B00CC274C /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC1E2395B83B00CC274C /* ChatScreen.swift */; };
 		0842AC212395BEC800CC274C /* ChannelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC202395BEC800CC274C /* ChannelScreen.swift */; };
 		0842AC232395C11800CC274C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC222395C11800CC274C /* LoginScreen.swift */; };
+		0842AC25239620DF00CC274C /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC24239620DF00CC274C /* BaseScreen.swift */; };
+		0842AC27239626FB00CC274C /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842AC26239626FB00CC274C /* BaseTest.swift */; };
 		08589FCC238318A600BADADE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCB238318A600BADADE /* CircleImage.swift */; };
 		08589FCF23834F5B00BADADE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08589FCD23834F5B00BADADE /* ProfileVC.swift */; };
 		08589FD023834F5B00BADADE /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08589FCE23834F5B00BADADE /* ProfileVC.xib */; };
@@ -67,6 +69,8 @@
 		0842AC1E2395B83B00CC274C /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		0842AC202395BEC800CC274C /* ChannelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelScreen.swift; sourceTree = "<group>"; };
 		0842AC222395C11800CC274C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		0842AC24239620DF00CC274C /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		0842AC26239626FB00CC274C /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		08589FCB238318A600BADADE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		08589FCD23834F5B00BADADE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		08589FCE23834F5B00BADADE /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				0842AC1D2395B7BB00CC274C /* Screens */,
 				0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */,
 				0842AC1723957D3A00CC274C /* Info.plist */,
+				0842AC26239626FB00CC274C /* BaseTest.swift */,
 			);
 			path = "Smack(10)UITests";
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				0842AC1E2395B83B00CC274C /* ChatScreen.swift */,
 				0842AC202395BEC800CC274C /* ChannelScreen.swift */,
 				0842AC222395C11800CC274C /* LoginScreen.swift */,
+				0842AC24239620DF00CC274C /* BaseScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -427,6 +433,8 @@
 				0842AC232395C11800CC274C /* LoginScreen.swift in Sources */,
 				0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */,
 				0842AC1F2395B83B00CC274C /* ChatScreen.swift in Sources */,
+				0842AC27239626FB00CC274C /* BaseTest.swift in Sources */,
+				0842AC25239620DF00CC274C /* BaseScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

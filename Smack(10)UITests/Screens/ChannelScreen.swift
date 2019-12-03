@@ -8,15 +8,30 @@
 
 import XCTest
 
-class ChannelScreen {
-    
-    static let app = XCUIApplication()
+class ChannelScreen: BaseScreen {
     
     private let loginBtn: XCUIElement = app/*@START_MENU_TOKEN@*/.buttons["loginBtnChannelVC"]/*[[".buttons[\"Login\"]",".buttons[\"loginBtnChannelVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    private let addChannelBtn: XCUIElement = app.buttons["addChannelBtnChannelVC"]
     
-    func login() {
-        loginBtn.tap()
+    override init() {
+        super.init()
+        visible()
+    }
+    
+    func login() -> LoginScreen{
+        tap(loginBtn)
+        return LoginScreen()
     }
     
     
+}
+
+//MARK: - visibility
+extension ChannelScreen {
+    func visible(){
+        guard addChannelBtn.waitForExistence(timeout: timeout) else {
+            XCTFail("Channel screen not visible")
+            return
+        }
+    }
 }

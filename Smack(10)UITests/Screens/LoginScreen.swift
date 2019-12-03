@@ -8,33 +8,43 @@
 
 import XCTest
 
-class LoginScreen {
-    static let app = XCUIApplication()
-    
+class LoginScreen: BaseScreen {
+
     private let loginBtn: XCUIElement = app.buttons["loginBtnLoginVC"]
-    let alertCannotLogin: XCUIElement = app.alerts["Can't login"].scrollViews.otherElements.buttons["OK"]
-    private let usernameTxt = app/*@START_MENU_TOKEN@*/.textFields["usernameTxtLoginVC"]/*[[".textFields[\"username\"]",".textFields[\"usernameTxtLoginVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-    private let passwordTxt = app/*@START_MENU_TOKEN@*/.secureTextFields["passwordTxtLoginVC"]/*[[".secureTextFields[\"password\"]",".secureTextFields[\"passwordTxtLoginVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    private let signupBtn: XCUIElement = app.buttons["signUpBtnLoginVC"]
+    private let alertCannotLogin: XCUIElement = app.alerts["Can't login"].scrollViews.otherElements.buttons["OK"]
+    private let usernameTxt: XCUIElement = app/*@START_MENU_TOKEN@*/.textFields["usernameTxtLoginVC"]/*[[".textFields[\"username\"]",".textFields[\"usernameTxtLoginVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    private let passwordTxt: XCUIElement = app/*@START_MENU_TOKEN@*/.secureTextFields["passwordTxtLoginVC"]/*[[".secureTextFields[\"password\"]",".secureTextFields[\"passwordTxtLoginVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     
+    override init(){
+        super.init()
+        visible()
+    }
     func login() {
-        loginBtn.tap()
+        tap(loginBtn)
     }
     
     func closeCannotLoginAlert() {
-        alertCannotLogin.tap()
+        tap(alertCannotLogin)
     }
     func typeUser(email: String){
-        usernameTxt.tap()
-        usernameTxt.typeText(email)
+        tap(usernameTxt)
+        type(email, to: usernameTxt)
     }
     func typePassword(password: String){
-        passwordTxt.tap()
-        passwordTxt.typeText(password)
+        tap(passwordTxt)
+        type(password, to: passwordTxt)
     }
     func clearEmail(){
         usernameTxt.clearAndEnterText(text: "")
     }
+    func alertCannotLoginExists() -> Bool{
+        alertCannotLogin.waitForExistence(timeout: timeout)
+    }
 }
+
+//MARK: - data change in text field
+
 extension XCUIElement {
 
     func clearAndEnterText(text: String) {
@@ -51,4 +61,16 @@ extension XCUIElement {
         self.typeText(text)
     }
 
+}
+
+//MARK: - visibility
+
+extension LoginScreen {
+    private func visible(){
+        guard signupBtn.waitForExistence(timeout: 5) else {
+            XCTFail("Login s creen is not visible")
+            return
+        }
+        
+    }
 }
