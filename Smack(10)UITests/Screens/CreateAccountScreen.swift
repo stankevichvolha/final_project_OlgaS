@@ -24,10 +24,12 @@ class CreateAccountScreen: BaseScreen {
         tap(usernameTxt)
         type(name, to: usernameTxt)
     }
+    
     func type(email: String){
         tap(emailTxt)
         type(email, to: emailTxt)
     }
+    
     func type(password: String){
         tap(passwordTxt)
         type(password, to: passwordTxt)
@@ -42,6 +44,7 @@ class CreateAccountScreen: BaseScreen {
     func createAccount(){
         tap(createAccountBtn)
     }
+    
 }
 
 // MARK: - visible

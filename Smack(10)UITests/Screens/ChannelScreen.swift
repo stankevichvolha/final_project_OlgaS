@@ -10,24 +10,30 @@ import XCTest
 
 class ChannelScreen: BaseScreen {
     
-    private let loginBtn: XCUIElement = app/*@START_MENU_TOKEN@*/.buttons["loginBtnChannelVC"]/*[[".buttons[\"Login\"]",".buttons[\"loginBtnChannelVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    private let loginBtn = app/*@START_MENU_TOKEN@*/.buttons["loginBtnChannelVC"]/*[[".buttons[\"Login\"]",".buttons[\"loginBtnChannelVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     private let addChannelBtn: XCUIElement = app.buttons["addChannelBtnChannelVC"]
-    
+    var labelBtnText  = app.buttons.element(matching: .any, identifier: "loginBtnChannelVC").label.description
+
     override init() {
         super.init()
         visible()
     }
-    
-    func login() -> LoginScreen{
+    func openProfile() -> ProfileScreen {
+        tap(loginBtn)
+        return ProfileScreen()
+    }
+    func login() -> LoginScreen {
         tap(loginBtn)
         return LoginScreen()
     }
-    
-    func getLoginBtnText(){
-        
+    func isLoginBtnExists()-> Bool {
+        loginBtn.waitForExistence(timeout: 10)
     }
     
-    
+    func readLoginBtn()-> String {
+        let loginTxt:String = loginBtn.value as! String
+        return loginTxt
+    }
 }
 
 //MARK: - visibility

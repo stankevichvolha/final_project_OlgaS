@@ -14,6 +14,10 @@ class Smack_10_UITests: BaseTest {
     func testAtemptToLoginWithoutEmailOrPassword() {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.openMenu()
+        if channelScreen.labelBtnText != "Login" {
+            let profileScreen = channelScreen.openProfile()
+            profileScreen.logout()
+        }
         let loginScreen = channelScreen.login()
         loginScreen.login()
         XCTAssert(loginScreen.alertCannotLoginExists(), "Allert 'Can't login' not visible")
@@ -33,6 +37,10 @@ class Smack_10_UITests: BaseTest {
         let randInt = Int.random(in: 1...10000)
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.openMenu()
+        if channelScreen.labelBtnText != "Login" {
+            let profileScreen = channelScreen.openProfile()
+            profileScreen.logout()
+        }
         let loginScreen = channelScreen.login()
         let createAccountScreen = loginScreen.createAnAccount()
         createAccountScreen.typeUser(name: "test\(randInt)")
@@ -42,7 +50,9 @@ class Smack_10_UITests: BaseTest {
         avatarPickerScreen.pickAvatar()
         createAccountScreen.chooseBackgroundColor()
         createAccountScreen.createAccount()
-
+        XCTAssert(channelScreen.isLoginBtnExists())
+        let profileScreen = channelScreen.openProfile()
+        XCTAssert(profileScreen.isProfileExists())
     }
 
 }

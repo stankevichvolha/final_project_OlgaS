@@ -45,6 +45,8 @@
 		08CC905A2385F20B006E4FF2 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC90592385F20B006E4FF2 /* KeyboardBoundView.swift */; };
 		08CC905C2385FA32006E4FF2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC905B2385FA32006E4FF2 /* MessageCell.swift */; };
 		08CC905E23879610006E4FF2 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CC905D23879610006E4FF2 /* AlertService.swift */; };
+		08E88B3C2396E32A0015AE33 /* LogautProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E88B3B2396E32A0015AE33 /* LogautProtocol.swift */; };
+		08E88B3E239740EF0015AE33 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E88B3D239740EF0015AE33 /* ProfileScreen.swift */; };
 		4F939037969B64826E302381 /* Pods_Smack_10_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2406DD37EE3CC0B435A5F9D7 /* Pods_Smack_10_.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		08CC90592385F20B006E4FF2 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		08CC905B2385FA32006E4FF2 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		08CC905D23879610006E4FF2 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		08E88B3B2396E32A0015AE33 /* LogautProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogautProtocol.swift; sourceTree = "<group>"; };
+		08E88B3D239740EF0015AE33 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		2406DD37EE3CC0B435A5F9D7 /* Pods_Smack_10_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack_10_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72846E6C3D820EA4F6560897 /* Pods-Smack(10).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack(10).debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack(10)/Pods-Smack(10).debug.xcconfig"; sourceTree = "<group>"; };
 		D4427739D9180AB94E942DBC /* Pods-Smack(10).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack(10).release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack(10)/Pods-Smack(10).release.xcconfig"; sourceTree = "<group>"; };
@@ -130,10 +134,10 @@
 		0842AC1423957D3A00CC274C /* Smack(10)UITests */ = {
 			isa = PBXGroup;
 			children = (
+				08E88B3A2396DEF30015AE33 /* Utils */,
 				0842AC1D2395B7BB00CC274C /* Screens */,
 				0842AC1523957D3A00CC274C /* Smack_10_UITests.swift */,
 				0842AC1723957D3A00CC274C /* Info.plist */,
-				0842AC26239626FB00CC274C /* BaseTest.swift */,
 			);
 			path = "Smack(10)UITests";
 			sourceTree = "<group>";
@@ -147,6 +151,7 @@
 				0842AC24239620DF00CC274C /* BaseScreen.swift */,
 				0842AC28239635C300CC274C /* CreateAccountScreen.swift */,
 				0842AC2A23963F5200CC274C /* AvatarPickerScreen.swift */,
+				08E88B3D239740EF0015AE33 /* ProfileScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -265,6 +270,15 @@
 				08CC905D23879610006E4FF2 /* AlertService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		08E88B3A2396DEF30015AE33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0842AC26239626FB00CC274C /* BaseTest.swift */,
+				08E88B3B2396E32A0015AE33 /* LogautProtocol.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		4AB2A80188507CAB13D73A4A /* Frameworks */ = {
@@ -442,7 +456,9 @@
 				0842AC1623957D3A00CC274C /* Smack_10_UITests.swift in Sources */,
 				0842AC1F2395B83B00CC274C /* ChatScreen.swift in Sources */,
 				0842AC27239626FB00CC274C /* BaseTest.swift in Sources */,
+				08E88B3C2396E32A0015AE33 /* LogautProtocol.swift in Sources */,
 				0842AC25239620DF00CC274C /* BaseScreen.swift in Sources */,
+				08E88B3E239740EF0015AE33 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
