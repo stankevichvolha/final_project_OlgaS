@@ -16,7 +16,7 @@ class LoginScreen: BaseScreen {
     private let usernameTxt: XCUIElement = app/*@START_MENU_TOKEN@*/.textFields["usernameTxtLoginVC"]/*[[".textFields[\"username\"]",".textFields[\"usernameTxtLoginVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     private let passwordTxt: XCUIElement = app/*@START_MENU_TOKEN@*/.secureTextFields["passwordTxtLoginVC"]/*[[".secureTextFields[\"password\"]",".secureTextFields[\"passwordTxtLoginVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     
-    override init(){
+     override init(){
         super.init()
         visible()
     }

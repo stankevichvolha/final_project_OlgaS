@@ -10,8 +10,9 @@ import XCTest
 
 class ChannelScreen: BaseScreen {
     
-    private let loginBtn = app/*@START_MENU_TOKEN@*/.buttons["loginBtnChannelVC"]/*[[".buttons[\"Login\"]",".buttons[\"loginBtnChannelVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    private let loginBtn: XCUIElement = app/*@START_MENU_TOKEN@*/.buttons["loginBtnChannelVC"]/*[[".buttons[\"Login\"]",".buttons[\"loginBtnChannelVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     private let addChannelBtn: XCUIElement = app.buttons["addChannelBtnChannelVC"]
+    private let menuBtn: XCUIElement = app/*@START_MENU_TOKEN@*/.buttons["menuBtnChatVC"]/*[[".buttons[\"smackBurger\"]",".buttons[\"menuBtnChatVC\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     var labelBtnText  = app.buttons.element(matching: .any, identifier: "loginBtnChannelVC").label.description
 
     override init() {
@@ -29,10 +30,9 @@ class ChannelScreen: BaseScreen {
     func isLoginBtnExists()-> Bool {
         loginBtn.waitForExistence(timeout: 10)
     }
-    
-    func readLoginBtn()-> String {
-        let loginTxt:String = loginBtn.value as! String
-        return loginTxt
+    func openChat(){
+        tap(menuBtn)
+
     }
 }
 

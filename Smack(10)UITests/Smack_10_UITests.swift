@@ -33,7 +33,7 @@ class Smack_10_UITests: BaseTest {
         
     }
     
-    func testCreateAccount(){
+    func testCreateAnAccount(){
         let randInt = Int.random(in: 1...10000)
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.openMenu()
@@ -53,6 +53,23 @@ class Smack_10_UITests: BaseTest {
         XCTAssert(channelScreen.isLoginBtnExists())
         let profileScreen = channelScreen.openProfile()
         XCTAssert(profileScreen.isProfileExists())
+    
+    }
+    
+    func testNewMessageAppearsAfterSending() {
+        let randInt = Int.random(in: 1...10000)
+        let chatScreen = ChatScreen()
+        if chatScreen.channelLbl == "Smack" {
+            let channelScreen = chatScreen.openMenu()
+            let loginScreen = channelScreen.login()
+            loginScreen.typeUser(email: "e@2.com")
+            loginScreen.type(password: "123456")
+            loginScreen.login()
+            channelScreen.openChat()
+        }
+        chatScreen.type(message: "test message \(randInt)")
+        chatScreen.sendMessage()
+        XCTAssert(chatScreen.isMessageExists(message: "test message \(randInt)"))
     }
 
 }
