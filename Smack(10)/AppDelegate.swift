@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +17,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if ProcessInfo.processInfo.arguments.contains("deleteAllData") {
+            clearUserDefaults()
+            let loginManager = UserDataService()
+            loginManager.logoutUser()
+        }
+                
+        if let url = ProcessInfo.processInfo.environment["TEST_BASE_URL"] {
+           BASE_URL = url
+        }
         return true
+    }
+    
+    func clearUserDefaults() {
+        let appDomainOpt: String? = Bundle.main.bundleIdentifier
+        guard let appDomain = appDomainOpt else { return }
+        UserDefaults.standard.removePersistentDomain(forName: appDomain)
+        UserDefaults.standard.synchronize()
+        let folders: [Any] = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)
+        let fm = FileManager()
+        for path in folders {
+            guard let path = path as? String else { continue }
+            try? fm.removeItem(atPath: path)
+        }
+        let folders_document: [Any] = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let fm1 = FileManager()
+        for path in folders_document {
+            guard let path = path as? String else { continue }
+            try? fm1.removeItem(atPath: path)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
