@@ -10,9 +10,24 @@ import XCTest
 
 class AvatarPickerScreen: BaseScreen {
     
-    private let avatar = app.collectionViews.cells.element(boundBy: Int.random(in: 0...27))
+    private let chooseToneBtn: XCUIElement = app.buttons["Dark"]
+    private let avatar: XCUIElement = app.collectionViews.cells.element(boundBy: Int.random(in: 0...27))
+    
+    override init(){
+        super.init()
+        visible()
+    }
     
     func pickAvatar() {
         tap(avatar)
+    }
+}
+// MARK: - visible
+extension AvatarPickerScreen{
+    func visible() {
+        guard chooseToneBtn.waitForExistence(timeout: timeout) else {
+            XCTFail("Create account screen is not visible")
+            return
+        }
     }
 }

@@ -34,6 +34,19 @@ class ChannelScreen: BaseScreen {
         tap(menuBtn)
 
     }
+    func addChannel()-> AddChannelScreen {
+        tap(addChannelBtn)
+        return AddChannelScreen()
+    }
+    
+    func isChannelNamePressent(text: String) -> Bool{
+        if BaseScreen.app.staticTexts[text].waitForExistence(timeout: 5){
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }
 
 //MARK: - visibility

@@ -72,21 +72,4 @@ class UserDataService {
         MessageService.instance.clearMessages()
     }
     
-    func changeUserName(newName:String, userId:String, completion: @escaping CopletionHandler){
-
-        let body: [String:Any] = [
-            "name":newName,
-        ]
-        print (userId)
-        Alamofire.request("\(URL_CHANGE_NAME)\(userId)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON
-            { (response) in
-                if response.result.error == nil {
-                    completion(true)
-                } else {
-                    completion(false)
-                    debugPrint(response.result.error as Any)
-                }
-        
-        }
-    }
 }

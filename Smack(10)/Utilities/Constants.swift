@@ -10,16 +10,16 @@ import Foundation
 
 typealias CopletionHandler = (_ Success: Bool)->()
 
+//base url
+var BASE_URL = "https://smackolgas.herokuapp.com/v1/"
+
 //url constants
-let BASE_URL = "https://smackolgas.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel"
 let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
-let URL_CHANGE_NAME = "\(BASE_URL)user/"
-
 
 //colors
 

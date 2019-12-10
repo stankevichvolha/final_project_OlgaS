@@ -11,8 +11,10 @@ import XCTest
 class BaseTest: XCTestCase {
     
     override func setUp() {
-        XCUIApplication().launch()
         continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["deleteAllData"]
+        app.launch()
     }
     
 }

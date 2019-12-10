@@ -10,7 +10,6 @@ import XCTest
 
 class Smack_10_UITests: BaseTest {
 
-
     func testAtemptToLoginWithoutEmailOrPassword() {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.openMenu()
@@ -70,6 +69,48 @@ class Smack_10_UITests: BaseTest {
         chatScreen.type(message: "test message \(randInt)")
         chatScreen.sendMessage()
         XCTAssert(chatScreen.isMessageExists(message: "test message \(randInt)"))
+    }
+    
+    func testAddChannel() {
+        let randInt = Int.random(in: 1...10000)
+        let chatScreen = ChatScreen()
+        let channelScreen = chatScreen.openMenu()
+        if channelScreen.labelBtnText == "Login"{
+            let loginScreen = channelScreen.login()
+            loginScreen.typeUser(email: "e@2.com")
+            loginScreen.type(password: "123456")
+            loginScreen.login()
+        }
+        let addChannelScreen = channelScreen.addChannel()
+        addChannelScreen.type(channelName: "chennaltest\(randInt)")
+        addChannelScreen.type(description: "new chennal")
+        addChannelScreen.createChannel()
+        XCTAssert(channelScreen.isChannelNamePressent(text: "#chennaltest\(randInt)"), "Chennal wasn't created")
+    }
+    
+    func testLongMessageVisible() {
+        let randInt = Int.random(in: 1...10000)
+        let chatScreen = ChatScreen()
+        if chatScreen.channelLbl == "Smack" {
+            let channelScreen = chatScreen.openMenu()
+            let loginScreen = channelScreen.login()
+            loginScreen.typeUser(email: "e@2.com")
+            loginScreen.type(password: "123456")
+            loginScreen.login()
+            channelScreen.openChat()
+        }
+        chatScreen.type(message: "test lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong message \(randInt)")
+        chatScreen.sendMessage()
+        takeScreenshot()
+        XCTAssert(chatScreen.isMessageExists(message: "test lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong message \(randInt)"))
+        
+    }
+    
+    func takeScreenshot(){
+        let screenShot = XCUIScreen.main.screenshot()
+        let attachment = XCTAttachment(screenshot: screenShot)
+        attachment.lifetime = .keepAlways
+        add(attachment)
     }
 
 }
