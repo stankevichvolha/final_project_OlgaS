@@ -19,8 +19,9 @@ class SmackRouter: Router {
         static let addUser = "user/add"
         static let addChannel = "channel/add"
         static let channel = "channel"
-        static let findUserByEmail = "user/byEmail/olga@test.com"
-        static let findAllMessages = "message/byChannel/1"
+        static let findUserByEmail = "user/byEmail/\(Session.shared.email)"
+        static let findUserById = "user/\(Session.shared.user[0].id)"
+        static let findAllMessages = "message/byChannel/\(Session.shared.channel[0].id)"
     }
     
     let session: Session = .shared
@@ -29,8 +30,12 @@ class SmackRouter: Router {
         super.init()
         setupLogin()
         setupFindUserByEmail()
+        setupFindUserId()
         setupMessages()
         setupChannels()
+        setupAddChannel()
+        setupRegister()
+        setupAddUser()
     }
     
     private func setupLogin() {
@@ -43,6 +48,20 @@ class SmackRouter: Router {
     }
     private func setupFindUserByEmail(){
         self[Endpoint.findUserByEmail] = JSONResponse {_ -> Any in
+            return[
+                "_id": self.session.user[0].id,
+                "avatarColor": self.session.user[0].avatarColor,
+                "avatarName": self.session.user[0].avatarName,
+                "email": self.session.user[0].email,
+                "name": self.session.user[0].name,
+                "__v": self.session.user[0]._v
+            ]
+            
+        }
+    }
+    
+    private func setupFindUserId(){
+        self[Endpoint.findUserById] = JSONResponse {_ -> Any in
             return[
                 "_id": self.session.user[0].id,
                 "avatarColor": self.session.user[0].avatarColor,
@@ -102,6 +121,27 @@ class SmackRouter: Router {
         self[Endpoint.addChannel] = JSONResponse {_-> Any in
             return [
                 "message": self.session.addChannelResponce
+            ]
+        }
+    }
+    
+    private func setupRegister(){
+        self[Endpoint.register] = JSONResponse {_-> Any in
+            return [
+                "message": self.session.addChannelResponce
+            ]
+        }
+    }
+    
+    private func setupAddUser() {
+        self[Endpoint.addUser] = JSONResponse {_-> Any in
+            return [
+                "__v": self.session.user[0]._v,
+                "avatarColor": self.session.user[0].avatarColor,
+                "avatarName": self.session.user[0].avatarName,
+                "email": self.session.user[0].email,
+                "name": self.session.user[0].name,
+                "_id": self.session.user[0].id
             ]
         }
     }

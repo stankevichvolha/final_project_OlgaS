@@ -40,6 +40,7 @@ class Session {
     ]
     
     var addChannelResponce: String = "Channel saved successfully"
+    var registerResponce: String = "Successfully created new account"
     
     private init(){}
 }
