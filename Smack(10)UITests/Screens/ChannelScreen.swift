@@ -35,6 +35,7 @@ class ChannelScreen: BaseScreen {
 
     }
     func addChannel()-> AddChannelScreen {
+        sleep(2)
         tap(addChannelBtn)
         return AddChannelScreen()
     }
